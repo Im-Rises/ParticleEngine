@@ -77,7 +77,7 @@ jobs:
     needs: [ build-windows, build-ubuntu, build-macos ]
     steps:
       - name: Download windows artifact content
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: artifact-windows
       - name: View content
@@ -108,7 +108,7 @@ jobs:
           rm release-windows.zip
           rm PhysicalEngine.exe
       - name: Download ubuntu artifact content
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: artifact-ubuntu
       - name: View content
@@ -131,7 +131,7 @@ jobs:
           rm release-linux.tar.gz
           rm PhysicalEngineLauncher
       - name: Download macos artifact content
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: artifact-macos
       - name: View content
